@@ -1,10 +1,11 @@
-
-
-`train' Usage
+LIBLINEAR_bitmap
 =============
 
+```
 Usage: train [options] training_set_file [model_file]
+
 options:
+
 -s type : set type of solver (default 1)
 	1 -- L2-regularized L2-loss support vector classification (dual)
 	3 -- L2-regularized L1-loss support vector classification (dual)
@@ -15,7 +16,7 @@ options:
 -wk weight: weights adjust the parameter C of different classes (default: -wk=1 for all k-th class)
 -q : quiet mode (no outputs)
 -W weight_file: set weight file. (default: W[i]=1, for all i)
--m mode : 1-vs-all mode (default 0) \n"
+-m mode : 1-vs-all mode (default 0)
     0 default LIBLINEAR behaviour
     1 Cpos=C/num_pos, Cneg=C/num_neg   (and every slack is also multiplied for W[i])
     2 Cpos=(C*num_neg)/num_pos, Cneg=C    (and every slack is also multiplied for W[i])
@@ -43,3 +44,4 @@ In the 2-class case, the weights of the slack variables are computed in the foll
 
 Note:
 The output between -t 1 and -t >1 may vary slightly (due to a random example selection during the optimization) 
+```
